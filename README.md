@@ -1,5 +1,6 @@
 # Three-Reel-Slots
- Three reel slots in C++
+ Three reel slots in C++.
+ This is mainly going to be used for me to explain my thought process and plan the project somewhat.
 
 
 # Programs design
