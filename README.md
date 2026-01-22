@@ -5,6 +5,10 @@
 
 # Programs design
 ![alt txt](/README_images/fuckass.drawio.png)
+*Image no longer valid as i may have added/removed some variables*
+
+
+***I believe I need to add the symbolsList in Slot instead of Reel***
 
 ## Slot:
 ``` C++
