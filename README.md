@@ -8,25 +8,74 @@
 
 ## Slot:
 ``` C++
-list<Reel> reelList;
+private:
+   int score_;
+   int token_;
+   int return_;
+   std::list<Reel> ReelList;
+
+public:
+   Slot();
+   void SpinSlot();
 ```
 
 ## Reel:
 ``` C++
-list<ReelBox> reelBoxesList;
-list<symbol> symbolsList;
+private:
+    std::list<ReelBox> reelBoxesList;
+    std::list<Symbol> symbolsList;
+
+public:
+    Reel();
+    Reel(std::list<ReelBox> reelBoxesList, std::list<Symbol> symbolsList);
+    
+    std::list<ReelBox> getReelBoxList();
+    std::list<Symbol> getSymbolsList();
+
+    void addReelBox(ReelBox box);
+    void addSymbol(Symbol symbol);
+
+    void rollReel(std::list<ReelBox> reelBoxesList);
 ```
 
 ## ReelBox:
 ``` C++
-int reelBoxID_;
-Symbol symbol_;
+private:
+    int reelBoxID_;
+    Symbol symbol_;
+
+public:
+    ReelBox();
+    ReelBox(int ID, Symbol symbol);
+
+    int getReelBoxID();
+    Symbol getReelSymbol();
+
+    void setReelBoxID(int ID);
+    void setReelBoxSymbol(Symbol symbol);
+    void setReelBox(int ID, Symbol symbol);
 ```
 
 ## Symbol:
 ``` C++
-int symbolID_;
-std::string symbolName_;
-int symbolWeight_;
-int symbolWorth_;
+private:
+    int symbolID_;
+    std::string symbolName_;
+    int symbolWeight_;
+    int symbolWorth_;
+
+public:
+    Symbol();
+    Symbol(int symbolID, std::string symbolName, int symbolWeight, int symbolWorth);
+
+    int getSymbolID();
+    std::string getSymbolName();
+    int getSymbolWeight(); 
+    int getSymbolWorth();
+
+    void setSymbolID(int ID);
+    void setSymbolName(std::string name);
+    void setSymbolWeight(int weight);
+    void setSymbolWorth(int worth);
+    void setSymbol(int ID, std::string name, int weight, int worth);
 ```
