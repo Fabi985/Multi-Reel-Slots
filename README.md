@@ -15,33 +15,45 @@
 ## Slot:
 ``` C++
 private:
-   int score_;
-   int token_;
-   int return_;
-   std::list<Reel> ReelList;
+    int score_;
+    int token_;
+    int return_;
+
+    std::list<Reel> ReelList; 
+    std::list<Symbol> SlotSymbolsList;
 
 public:
-   Slot();
-   void SpinSlot();
+    Slot();
+
+    std::list<Reel> getReelList();
+    std::list<Symbol> getSymbolsList();
+    
+    void addSymbol(Symbol symbol);
+    void spinSlot(std::list<Symbol> SlotSymbolsList);
+    void getScore(std::list<Reel> ReelList);
+    void slotOutput();
 ```
 
 ## Reel:
 ``` C++
 private:
+    ReelBox box1;
+    ReelBox box2;
+    ReelBox box3;
+
     std::list<ReelBox> reelBoxesList;
-    std::list<Symbol> symbolsList;
 
 public:
     Reel();
-    Reel(std::list<ReelBox> reelBoxesList, std::list<Symbol> symbolsList);
+    Reel(std::list<ReelBox> reelBoxesList);
     
     std::list<ReelBox> getReelBoxList();
-    std::list<Symbol> getSymbolsList();
-
+    
     void addReelBox(ReelBox box);
-    void addSymbol(Symbol symbol);
 
     void rollReel(std::list<ReelBox> reelBoxesList);
+
+    void updateReelBox(ReelBox box);
 ```
 
 ## ReelBox:
