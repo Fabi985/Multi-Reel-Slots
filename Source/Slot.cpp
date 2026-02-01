@@ -37,7 +37,9 @@ void Slot::addSymbol(Symbol Symbol) {
 }
 
 void Slot::spinSlot() {
+    srand(time(0));
     for (Reel r : ReelList) {
+        srand(time(0));
         r.rollReel(r.getReelBoxList());
     }
 }
