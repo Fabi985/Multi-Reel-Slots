@@ -38,4 +38,9 @@ void Slot::addSymbol(Symbol Symbol) {
 
 void Slot::spinSlot() {
     //TODO: rework this
+    std::cout << "\nSpinning reels";
+    for (Reel r: ReelList) {
+        std::cout << "\n\nspinning reel no" << r.getReelID();
+        r.rollReel(r.getReelBoxList());
+    }
 }

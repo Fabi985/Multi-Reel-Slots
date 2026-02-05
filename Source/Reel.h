@@ -31,6 +31,8 @@ class Reel {
         void rollReel(std::list<ReelBox> &reelBoxesList);
 
         void updateReelBox(ReelBox &box, Symbol &symbol);
+
+        void boxPercentages(int randomNum, ReelBox rb);
 };
 
 #endif

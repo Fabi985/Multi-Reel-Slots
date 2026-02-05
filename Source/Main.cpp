@@ -19,5 +19,7 @@ int main() {
     slotMachine1.addSymbol(seven);
 
     slotMachine1.spinSlot();
+
+    std::cout << "\n\nend;\n\n";
     return 0;
 }

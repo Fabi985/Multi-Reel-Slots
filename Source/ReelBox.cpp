@@ -29,14 +29,12 @@ void ReelBox::setReelBoxID(int &ID) {
     reelBoxID_ = ID;
 }
 
-void ReelBox::setReelBoxSymbol(Symbol &symbol) {
-    symbol_ = symbol;
+// Find out how to do pointer work properly
+void ReelBox::setReelBoxSymbol(Symbol * const &symbol) {
+    return;
 }
 
 void ReelBox::setReelBox(int &ID, Symbol &symbol) {
     reelBoxID_ = ID;
-    // symbol_.setSymbolID(symbol.getSymbolID());
-    // symbol_.setSymbolName(symbol.getSymbolName());
-    // symbol_.setSymbolWeight(symbol.getSymbolWeight());
-    // symbol_.setSymbolWorth(symbol.getSymbolWorth());
+    // gaah
 }

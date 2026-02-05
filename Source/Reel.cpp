@@ -44,9 +44,25 @@ void Reel::setupReel() {
 }
 
 void Reel::rollReel(std::list<ReelBox> &reelBoxes) {
-    // TODO: rework this
+    for (ReelBox rb : reelBoxes) {
+        int randomNum = rand() % 101;
+        boxPercentages(randomNum, rb);
+        std::cout << "\n\nrandomNum:" << randomNum;
+        std::cout << "\nrolling box no" << rb.getReelBoxID();
+        std::cout << "\tname:" << rb.getReelSymbol().getSymbolName();
+    }
+}
+
+void Reel::boxPercentages(int randomNum, ReelBox rb) {
+    Symbol lemon = Symbol(1, "Lemon", 50, 3);
+    Symbol cherry = Symbol(2, "Cherry", 25, 5);
+    Symbol seven = Symbol(3, "Seven", 5, 7);
+    if (randomNum >= 50) {updateReelBox(rb, lemon);}
+    else if (randomNum < 50 || randomNum >= 25) {updateReelBox(rb, cherry);}
+    else if (randomNum < 25 || randomNum >= 0) {updateReelBox(rb, seven);}
 }
 
 void Reel::updateReelBox(ReelBox &box, Symbol &symbol) {
-    box.setReelBoxSymbol(symbol);
+    // pointer work needs redoing
+    box.setReelBoxSymbol();
 }
