@@ -19,7 +19,7 @@ Reel::Reel(int ID) {
 }
 
 // Get
-std::list<ReelBox> &Reel::getReelBoxList() {
+std::list<ReelBox> Reel::getReelBoxList() {
     return reelBoxesList;
 }
 
@@ -43,13 +43,12 @@ void Reel::setupReel() {
     addReelBox(box3);
 }
 
-void Reel::rollReel(std::list<ReelBox> &reelBoxes) {
+void Reel::rollReel(std::list<ReelBox> reelBoxes) {
     for (ReelBox rb : reelBoxes) {
         int randomNum = rand() % 101;
+        std::cout << "\nrandomNum:" << randomNum;
         boxPercentages(randomNum, rb);
-        std::cout << "\n\nrandomNum:" << randomNum;
-        std::cout << "\nrolling box no" << rb.getReelBoxID();
-        std::cout << "\tname:" << rb.getReelSymbol().getSymbolName();
+        std::cout << "\n\nname:" << rb.getReelSymbol().getSymbolName() << "\n";
     }
 }
 
@@ -62,7 +61,8 @@ void Reel::boxPercentages(int randomNum, ReelBox rb) {
     else if (randomNum < 25 || randomNum >= 0) {updateReelBox(rb, seven);}
 }
 
-void Reel::updateReelBox(ReelBox &box, Symbol &symbol) {
+void Reel::updateReelBox(ReelBox box, Symbol symbol) {
     // pointer work needs redoing
-    box.setReelBoxSymbol();
+    std::cout << "\nupdating " << box.getReelBoxID() << " to " << symbol.getSymbolID();
+    box.setReelBoxSymbol(symbol);
 }

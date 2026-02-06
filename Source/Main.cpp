@@ -20,6 +20,12 @@ int main() {
 
     slotMachine1.spinSlot();
 
+    for (Reel r : slotMachine1.getReelList()) {
+        for (ReelBox rb : r.getReelBoxList()) {
+            std::cout << "reel box no: " << rb.getReelBoxID() << ", Reelbox symbol: " << rb.getReelSymbol().getSymbolName() << "\n";
+        }
+    }
+
     std::cout << "\n\nend;\n\n";
     return 0;
 }

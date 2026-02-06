@@ -7,7 +7,7 @@
 // Constructor
 ReelBox::ReelBox() {
     reelBoxID_ = 0;
-    symbol_ = Symbol();
+    rbSymbol_ = Symbol();
 }
 
 ReelBox::ReelBox(int ID) {
@@ -20,21 +20,22 @@ int ReelBox::getReelBoxID() {
 }
 
 Symbol ReelBox::getReelSymbol() {
-    return symbol_;
+    return rbSymbol_;
 }
 
 
 // Set
-void ReelBox::setReelBoxID(int &ID) {
+void ReelBox::setReelBoxID(int ID) {
     reelBoxID_ = ID;
 }
 
 // Find out how to do pointer work properly
-void ReelBox::setReelBoxSymbol(Symbol * const &symbol) {
-    return;
+void ReelBox::setReelBoxSymbol(Symbol symbol) {
+    std::cout << "Debug;";
+    rbSymbol_.setSymbol(symbol);
 }
 
-void ReelBox::setReelBox(int &ID, Symbol &symbol) {
+void ReelBox::setReelBox(int ID, Symbol symbol) {
     reelBoxID_ = ID;
     // gaah
 }

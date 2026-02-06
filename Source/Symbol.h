@@ -6,9 +6,13 @@
 class Symbol {
     private:
         int symbolID_;
+        int *sIDPtr;
         std::string symbolName_;
+        std::string *sNPtr;
         int symbolWeight_;
+        int *sWePtr;
         int symbolWorth_;
+        int *sWoPtr;
 
     public:
         Symbol();
@@ -19,11 +23,11 @@ class Symbol {
         int getSymbolWeight(); 
         int getSymbolWorth();
 
-        void setSymbolID(int &ID);
-        void setSymbolName(std::string &name);
-        void setSymbolWeight(int &weight);
-        void setSymbolWorth(int &worth);
-        void setSymbol(Symbol &symbol);
+        void setSymbolID(int ID);
+        void setSymbolName(std::string name);
+        void setSymbolWeight(int weight);
+        void setSymbolWorth(int worth);
+        void setSymbol(Symbol symbol);
 };
 
 #endif

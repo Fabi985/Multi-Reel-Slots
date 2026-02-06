@@ -21,16 +21,16 @@ class Reel {
         Reel(int ID);
         Reel(std::list<ReelBox> reelBoxesList);
         
-        std::list<ReelBox> &getReelBoxList();
+        std::list<ReelBox> getReelBoxList();
         int getReelID();
         
         void setupReel();
 
         void addReelBox(ReelBox box);
 
-        void rollReel(std::list<ReelBox> &reelBoxesList);
+        void rollReel(std::list<ReelBox> reelBoxesList);
 
-        void updateReelBox(ReelBox &box, Symbol &symbol);
+        void updateReelBox(ReelBox box, Symbol symbol);
 
         void boxPercentages(int randomNum, ReelBox rb);
 };
