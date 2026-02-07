@@ -30,7 +30,7 @@ void ReelBox::setReelBoxID(int ID) {
 }
 
 // Find out how to do pointer work properly
-void ReelBox::setReelBoxSymbol(Symbol symbol) {
+void ReelBox::setReelBoxSymbol(Symbol &symbol) {
     rbSymbol_.setSymbol(symbol);
 }
 

@@ -52,7 +52,7 @@ void Symbol::setSymbolWorth(int worth) {
     symbolWorth_ = worth;
 }
 
-void Symbol::setSymbol(Symbol symbol) {
+void Symbol::setSymbol(Symbol &symbol) {
     symbolID_ = symbol.getSymbolID();
     symbolName_ = symbol.getSymbolName();
     symbolWeight_ = symbol.getSymbolWeight();
