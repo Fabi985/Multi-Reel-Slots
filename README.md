@@ -1,3 +1,5 @@
+***Currently nuked my entire project, i need to restart this again***
+
 # Compiler code
 *This is only for me incase i forget how to compile my own code*
 
