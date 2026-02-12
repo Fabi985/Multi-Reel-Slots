@@ -23,6 +23,8 @@ class Slot {
         void addTokens(int amount);
 
         void spinSlot();
+        void displayGrid();
+        void checkWins();
 
         int getScore() const;
         int getTokens() const;
