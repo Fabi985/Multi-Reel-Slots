@@ -11,7 +11,10 @@ class Symbol {
     public:
         Symbol();
 
-        Symbol(std::string symbolName, int symbolValue);
+        Symbol(std::string iname, int ivalue);
+
+        // Setter
+        void setSymbol(std::string iname, int ivalue);
 
         // Getters
         std::string getName() const;
